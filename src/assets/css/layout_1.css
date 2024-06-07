@@ -1,0 +1,41 @@
+.layout_1_hero {
+  object-fit: cover;
+  object-position: center;
+}
+
+.layout_1_section_1 {
+  padding: 20px 100px;
+}
+
+.layout_1_section_2 {
+  padding: 20px 100px;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.bootstrap-card {
+  display: flex;
+  justify-content: center;
+}
+
+.layout_1_section_3 {
+  padding: 20px 100px;
+}
+
+.layout_1_section_3_container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+}
+
+.layout_1_section_3_paragraph {
+  text-align: start;
+  overflow-y: auto;
+  max-height: 450px;
+}
+
+.layer_1_section_3_img {
+  object-fit: cover;
+  object-position: center;
+}

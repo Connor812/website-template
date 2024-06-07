@@ -9,7 +9,7 @@ import { PostData } from "../utils/PostData";
 
 function Login() {
 
-    const { isLoggedIn, setIsLoggedIn } = useContext(DataContext);
+    const { setIsLoggedIn } = useContext(DataContext);
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -23,6 +23,9 @@ function Login() {
         if (errorParam) {
             if (errorParam === 'Successfully_Created_Account_Please_Login') {
                 setSuccess('Account created successfully. Please login.');
+                return;
+            } else if (errorParam === 'Password_reset_successfully') {
+                setSuccess('Password reset successfully. Please login.');
                 return;
             }
             setError(errorParam.replace(/_/g, ' '));
@@ -54,7 +57,7 @@ function Login() {
                 navigate('/home');
             })
             .catch((error) => {
-                setError(error);
+                setError(error.message);
                 setButtonDisabled(false);
             });
     }
@@ -88,7 +91,7 @@ function Login() {
                         <Link to="/signup">Sign Up</Link>
                         <Link to="/forgot_password">Forgot Password</Link>
                     </Form.Group>
-                    <Button variant="primary" type="submit" onClick={(e) => handleSubmit(e)} disabled={buttonStatus}>
+                    <Button className="mb-2" variant="primary" type="submit" onClick={(e) => handleSubmit(e)} disabled={buttonStatus}>
                         Submit
                     </Button>
                 </Form>

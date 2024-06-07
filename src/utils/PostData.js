@@ -1,5 +1,5 @@
 export function PostData(type, userData) {
-    let BaseURL = 'https://localhost/website-template/api/';
+    let BaseURL = 'http://localhost/website-template/api/';
 
     return new Promise((resolve, reject) => {
         fetch(BaseURL + type, {

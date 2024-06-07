@@ -39,7 +39,7 @@ function Signup() {
                 }
             })
             .catch((error) => {
-                setError(error);
+                setError(error.message);
                 setButtonDisabled(false);
             });
 
@@ -69,7 +69,7 @@ function Signup() {
                         <Form.Label>Password</Form.Label>
                         <Form.Control type="password" placeholder="Password" onInput={(e) => setPassword(e.target.value)} />
                     </Form.Group>
-                    <Button variant="primary" type="button" onClick={(e) => handleSubmit(e)} disabled={buttonStatus}>
+                    <Button className="mb-2" variant="primary" type="button" onClick={(e) => handleSubmit(e)} disabled={buttonStatus}>
                         Submit
                     </Button>
                 </Form>

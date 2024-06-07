@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Alert from "react-bootstrap/Alert";
@@ -42,6 +43,11 @@ function ForgotPassword() {
                         <Form.Text className="text-muted">
                             We Will Email You Instructions On How To Reset Your Password.
                         </Form.Text>
+                    </Form.Group>
+                    <Form.Group>
+                        <Link to="/login">
+                            Go Back To Login
+                        </Link>
                     </Form.Group>
                     <Button variant="primary" type="button" onClick={(e) => handleSubmit(e)} >
                         Submit

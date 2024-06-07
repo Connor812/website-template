@@ -28,7 +28,7 @@ function ProgressiveLoadImage({ src, alt, className, height, width }) {
         <>
             {!isLoaded ? (
                 <div
-                    className="image-placeholder"
+                    className={`image-placeholder ${className}`}
                     style={{ width: width, height: height }}
                 />
             ) : (

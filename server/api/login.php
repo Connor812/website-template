@@ -107,7 +107,7 @@ function insertToken($conn, $username, $user_id)
                 "message" => "Login successful",
                 "userData" => array(
                     "token" => $token,
-                    "user_id" => $user_id,
+                    "user_id" => urlencode($user_id),
                     "timestamp" => $timestamp,
                     "username" => $username
                 )

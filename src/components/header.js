@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -16,9 +15,6 @@ import { CgProfile } from "react-icons/cg";
 function Header() {
 
     const { isLoggedIn, logout } = useContext(DataContext);
-    const navigate = useNavigate();
-
-
 
     return (
         <Navbar expand="lg" className="bg-body-tertiary" data-bs-theme="dark">
@@ -42,13 +38,21 @@ function Header() {
                             </Link>
                         </Nav.Link>
                         <NavDropdown title="Link" id="navbarScrollingDropdown">
-                            <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action4">
-                                Another action
+                            <NavDropdown.Item>
+                                <Link to="layout_1">
+                                    Layout 1
+                                </Link>
+                            </NavDropdown.Item>
+                            <NavDropdown.Item>
+                                <Link to="layout_2">
+                                    Layout 2
+                                </Link>
                             </NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action5">
-                                Something else here
+                            <NavDropdown.Item>
+                                <Link to="layout_3">
+                                    Layout 3
+                                </Link>
                             </NavDropdown.Item>
                         </NavDropdown>
                         <Nav.Link href="#" disabled>

@@ -8,8 +8,6 @@ export function Authentication() {
         };
     }
 
-    console.log("Authentication");
-
     const timestamp = userData.timestamp;
     const currentTime = new Date();
     const timestampDate = new Date(timestamp);

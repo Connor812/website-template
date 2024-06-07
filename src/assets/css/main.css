@@ -1,5 +1,6 @@
 :root {
     --black: #333;
+    --light-grey: #aeaeae;
     --grey: #4b4b4b;
     --white: #fff;
 }
@@ -47,15 +48,16 @@ a {
     color: #007bff;
 }
 
-button {
-    cursor: pointer;
+hr {
+    border: 1px solid var(--black);
 }
 
-footer {
-    width: 100%;
-    height: auto;
-    background-color: #333;
-    color: white;
+hr .white {
+    border: 1px solid var(--white) !important;
+}
+
+button {
+    cursor: pointer;
 }
 
 .image-placeholder {
@@ -75,4 +77,45 @@ footer {
     100% {
         background-color: var(--black);
     }
+}
+
+
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* Footer */
+
+footer {
+    width: 100%;
+    height: auto;
+    background-color: #333;
+    color: white;
+    padding: 20px 50px;
+}
+
+.send-a-message {
+    background-color: var(--black);
+    color: var(--white);
+    border: 1px solid var(--white);
+    padding: 5px 20px;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul li b {
+    color: var(--white);
+}
+
+footer ul li {
+    color: var(--light-grey)
 }
