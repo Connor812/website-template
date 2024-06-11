@@ -69,7 +69,6 @@ function AppContent() {
         <meta name="twitter:image" content="https://www.yourwebsite.com/image.jpg" />
         <meta name="twitter:site" content="@yourTwitterHandle" />
 
-
         <script type="application/ld+json">
           {JSON.stringify(jsonLdData)}
         </script>

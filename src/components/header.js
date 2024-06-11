@@ -5,7 +5,7 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import { DataContext } from '../dataContext/dataContext';
 
@@ -14,6 +14,7 @@ import { CgProfile } from "react-icons/cg";
 
 function Header() {
 
+    const navigate = useNavigate();
     const { isLoggedIn, logout } = useContext(DataContext);
 
     return (
@@ -27,32 +28,22 @@ function Header() {
                         style={{ maxHeight: '100px' }}
                         navbarScroll
                     >
-                        <Nav.Link>
-                            <Link to="/home">
-                                Home
-                            </Link>
+                        <Nav.Link onClick={() => navigate("/home")}>
+                            Home
                         </Nav.Link>
-                        <Nav.Link>
-                            <Link to="/dashboard">
-                                Dashboard
-                            </Link>
+                        <Nav.Link onClick={() => navigate("/dashboard")}>
+                            Dashboard
                         </Nav.Link>
                         <NavDropdown title="Link" id="navbarScrollingDropdown">
-                            <NavDropdown.Item>
-                                <Link to="layout_1">
-                                    Layout 1
-                                </Link>
+                            <NavDropdown.Item onClick={() => navigate("/layout_1")}>
+                                Layout 1
                             </NavDropdown.Item>
-                            <NavDropdown.Item>
-                                <Link to="layout_2">
-                                    Layout 2
-                                </Link>
+                            <NavDropdown.Item onClick={() => navigate("/layout_2")}>
+                                Layout 2
                             </NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item>
-                                <Link to="layout_3">
-                                    Layout 3
-                                </Link>
+                            <NavDropdown.Item onClick={() => navigate("/layout_3")}>
+                                Layout 3
                             </NavDropdown.Item>
                         </NavDropdown>
                         <Nav.Link href="#" disabled>

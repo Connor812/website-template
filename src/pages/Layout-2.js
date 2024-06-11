@@ -13,7 +13,7 @@ function Layout_2() {
                         <ProgressiveLoadImage
                             src="https://via.placeholder.com/800x400"
                             alt="First slide"
-                            className="d-block w-100"
+                            className="d-block w-100 carousel-image"
                             width="100%"
                             height="500px"
                         />
@@ -26,7 +26,7 @@ function Layout_2() {
                         <ProgressiveLoadImage
                             src="https://via.placeholder.com/800x400"
                             alt="First slide"
-                            className="d-block w-100"
+                            className="d-block w-100 carousel-image"
                             width="100%"
                             height="500px"
                         />
@@ -39,7 +39,7 @@ function Layout_2() {
                         <ProgressiveLoadImage
                             src="https://via.placeholder.com/800x400"
                             alt="First slide"
-                            className="d-block w-100"
+                            className="d-block w-100 carousel-image"
                             width="100%"
                             height="500px"
                         />
